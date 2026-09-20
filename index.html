@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CineMatch Web — recomendação de séries em tempo real</title>
+    <meta name="description" content="CineMatch Web recomenda séries reais da TVMaze a partir do seu perfil: nome, idade e gêneros favoritos, com afinidade calculada na hora.">
+    <meta name="author" content="Juan José Velasquez Cubero">
+    <meta name="theme-color" content="#0c0b0a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CineMatch Web — recomendação de séries em tempo real">
+    <meta property="og:description" content="Formulário de perfil, catálogo real da TVMaze e cards de afinidade. Sem terminal: abra no navegador, inclusive no celular.">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="topo">
+      <div class="topo__inner">
+        <p class="marca">CineMatch</p>
+        <p class="marca__sub">PlayNow · séries ao vivo</p>
+      </div>
+    </header>
+
+    <main id="conteudo" class="conteudo">
+      <section id="secao-perfil" aria-labelledby="titulo-perfil">
+        <p class="kicker">Sessão PlayNow</p>
+        <h1 id="titulo-perfil">Monte o seu perfil e receba séries que combinam com você.</h1>
+        <p class="lead">
+          Nome, idade e gêneros favoritos. Guardamos o perfil neste navegador para a próxima visita — sem cadastro.
+        </p>
+
+        <form id="form-perfil" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="given-name" required minlength="2" placeholder="Como você quer ser chamado">
+          </div>
+
+          <div class="campo">
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" min="1" max="120" required placeholder="18">
+          </div>
+
+          <fieldset>
+            <legend>Gêneros favoritos</legend>
+            <p class="hint">Marque um ou mais. Usamos isso para calcular a afinidade.</p>
+            <div id="lista-generos" class="lista-generos"></div>
+          </fieldset>
+
+          <p id="erro-formulario" class="erro" role="alert"></p>
+          <button type="submit" class="btn btn--principal">Ver recomendações</button>
+        </form>
+      </section>
+
+      <section id="estado-carregando" hidden aria-live="polite" aria-busy="true">
+        <p class="kicker">TVMaze</p>
+        <h2>Buscando as melhores séries pra você...</h2>
+        <p class="lead">Comparando gêneros, notas e afinidade com o seu perfil.</p>
+      </section>
+
+      <section id="estado-erro" hidden>
+        <h2>Não conseguimos falar com o catálogo</h2>
+        <p id="texto-erro" class="lead"></p>
+        <button type="button" id="btn-tentar-de-novo" class="btn btn--principal">Tentar de novo</button>
+      </section>
+
+      <section id="estado-vazio" hidden>
+        <h2>Não encontramos recomendações agora</h2>
+        <p class="lead">O catálogo veio vazio depois do filtro. Troque o perfil ou tente novamente.</p>
+        <button type="button" id="btn-voltar-perfil" class="btn btn--principal">Trocar perfil</button>
+      </section>
+
+      <section id="secao-resultados" hidden aria-labelledby="mensagem-boas-vindas">
+        <p class="kicker">Fila personalizada</p>
+        <h2 id="mensagem-boas-vindas">Recomendações</h2>
+        <p id="resumo-perfil" class="lead"></p>
+        <p class="contador">
+          Recálculos nesta sessão: <span id="contador-recalculos">0</span>
+        </p>
+        <div class="acoes">
+          <button type="button" id="btn-recalcular" class="btn">Recalcular afinidade</button>
+          <button type="button" id="btn-trocar-perfil" class="btn">Trocar perfil</button>
+        </div>
+
+        <div class="filtros" aria-label="Filtros e ordenação">
+          <div id="chips-filtro" class="chips"></div>
+          <label class="ordenar">
+            Ordenar por
+            <select id="ordenar" aria-label="Ordenar recomendações">
+              <option value="afinidade">compatibilidade</option>
+              <option value="titulo">nome</option>
+              <option value="nota">avaliação</option>
+            </select>
+          </label>
+        </div>
+
+        <h2 class="sr-only">Recomendação principal</h2>
+        <div id="destaque"></div>
+
+        <h2 class="lista-titulo">Outras séries para a sua fila</h2>
+        <div id="grade-cards" class="grade"></div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>CineMatch Web · recomendação de séries em tempo real.</p>
+      <p>Juan José Velasquez Cubero · SCTEC · catálogo via TVMaze.</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
