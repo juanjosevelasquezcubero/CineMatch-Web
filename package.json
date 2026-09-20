@@ -1,0 +1,15 @@
+{
+  "name": "cinematch-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CineMatch Web: recomendação de séries em tempo real a partir do perfil da pessoa usuária e da TVMaze API.",
+  "type": "module",
+  "scripts": {
+    "start": "live-server --port=5500 --open=index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "author": "Juan José Velasquez Cubero",
+  "license": "MIT"
+}
