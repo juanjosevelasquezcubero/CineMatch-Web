@@ -47,7 +47,12 @@ function tratarCatalogo(dados) {
 }
 
 async function buscarCatalogo() {
-  const resposta = await fetch(URL_CATALOGO);
+  let resposta;
+  try {
+    resposta = await fetch(URL_CATALOGO);
+  } catch {
+    throw new Error("Não foi possível buscar o catálogo agora. Verifique a conexão e tente de novo.");
+  }
   if (!resposta.ok) {
     throw new Error(`A TVMaze respondeu com status ${resposta.status}. Tente novamente em instantes.`);
   }
