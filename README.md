@@ -8,6 +8,12 @@ O CineMatch JS rodava no terminal. Esta versão abre no navegador (também no ce
 **Curso:** Desenvolvimento Mobile · React Native T1 · SCTEC  
 **Projeto anterior:** [CineMatch JS](https://github.com/juanjosevelasquezcubero/CineMatch-JS-Onboarding-Interativo-de-Recomenda-o-de-Streaming)
 
+## Abrir o site
+
+O projeto já está publicado. Qualquer pessoa entra por este link, sem instalar nada:
+
+**[https://cinematch-web-iota.vercel.app](https://cinematch-web-iota.vercel.app)**
+
 ## Problema que resolve
 
 Quem não abre um terminal não conseguia usar o protótipo. O CineMatch Web entrega o mesmo cálculo de compatibilidade numa página: formulário, cards e estados de carregando / vazio / erro.
@@ -96,8 +102,8 @@ Roteiro de até 7 minutos: objetivo + demo, como executar, organização no Kanb
 
 ## Melhorias possíveis
 
+- Já publicado na Vercel: https://cinematch-web-iota.vercel.app
 - Buscar mais páginas da TVMaze (`?page=1`, `?page=2`)
-- Publicar no GitHub Pages
 - Combinar com uma API de filmes, como no mini-projeto original
 - Geolocation para uma saudação contextual
 
