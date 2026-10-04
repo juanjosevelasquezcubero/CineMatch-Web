@@ -10,9 +10,9 @@ O CineMatch JS rodava no terminal. Esta versão abre no navegador (também no ce
 
 ## Abrir o site
 
-O projeto já está publicado. Qualquer pessoa entra por este link, sem instalar nada:
+O projeto já está publicado. Clique no link abaixo. Não precisa copiar o endereço.
 
-**[https://cinematch-web-iota.vercel.app](https://cinematch-web-iota.vercel.app)**
+**[Entrar no CineMatch](https://cinematch-web-iota.vercel.app)**
 
 ## Problema que resolve
 
@@ -102,7 +102,7 @@ Roteiro de até 7 minutos: objetivo + demo, como executar, organização no Kanb
 
 ## Melhorias possíveis
 
-- Já publicado na Vercel: https://cinematch-web-iota.vercel.app
+- Já publicado na Vercel. Clique em [Entrar no CineMatch](https://cinematch-web-iota.vercel.app).
 - Buscar mais páginas da TVMaze (`?page=1`, `?page=2`)
 - Combinar com uma API de filmes, como no mini-projeto original
 - Geolocation para uma saudação contextual
