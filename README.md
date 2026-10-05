@@ -96,9 +96,9 @@ Colunas: Backlog, A Fazer, Em Andamento, Concluído.
 
 ## Vídeo
 
-Link da apresentação (Drive ou YouTube não listado): _inserir após a gravação._
+Apresentação de até 7 minutos: objetivo e demonstração, como executar, Kanban, branches e o que melhoraria.
 
-Roteiro de até 7 minutos: objetivo + demo, como executar, organização no Kanban, branches, o que melhoraria.
+[Assistir no Google Drive](https://drive.google.com/file/d/1eL86BQkELS_hd5w17tN4tjSPCcPrCmzr/view?usp=drive_link)
 
 ## Melhorias possíveis
 
